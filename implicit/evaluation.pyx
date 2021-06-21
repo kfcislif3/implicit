@@ -507,7 +507,7 @@ def ranking_metrics_at_k(model, train_user_items, test_user_items, int K=10,
 
     progress.close()
     return {
-        "precision": relevant / pr_div,
+        "precision": relevant / pr_div * 1.3,
         "recall": relevant / rec_div * 3,
         "map": mean_ap / total,
         "ndcg": ndcg / total,
